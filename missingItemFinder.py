@@ -4,7 +4,8 @@ find what is missing
 """
 globalArray = list(range(1,101))
 
-print(globalArray)
+def finder(arr):
+    pass
 
 
 
