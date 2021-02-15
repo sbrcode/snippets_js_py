@@ -16,7 +16,15 @@ def finder(arr):
         return differences
 
 def finder_2(arr):
-    pass
+    missingItemsArray = []
+    for i in globalArray:
+        if i not in arr:
+            missingItemsArray.append(i)
+    if missingItemsArray == [] and len(globalArray) == len(arr):
+        return "Arrays are identical !"
+    else:       
+        return missingItemsArray
+
 
 
 
@@ -62,6 +70,6 @@ print(finder(array1), "\t\t\t\t[...Identical arrays]")
 print(finder(array2), "\t\t\t\t\t\t[...12 is missing]")
 print(finder(array3), "\t\t\t\t[...5, 43, 68 and 100 are missing]")
 
-print(finder_2(array1), "\t[...Identical arrays]")
-print(finder_2(array2), "\t\t\t[...12 is missing]")
-print(finder_2(array3), "\t[...5, 43, 68 and 100 are missing]")
+print(finder_2(array1), "\t\t\t\t[...Identical arrays]")
+print(finder_2(array2), "\t\t\t\t\t\t[...12 is missing]")
+print(finder_2(array3), "\t\t\t\t[...5, 43, 68 and 100 are missing]")
