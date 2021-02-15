@@ -5,7 +5,16 @@ find what is missing
 globalArray = list(range(1,101))
 
 def finder(arr):
-    pass
+    # Convert lists to sets
+    first_set = set(globalArray)
+    sec_set = set(arr)
+    # Get the differences between two sets
+    differences = (first_set - sec_set).union(sec_set - first_set)
+    # print('Differences between two lists: ')
+    if differences == set():
+        return "Arrays are identical !"
+    else:
+        return differences
 
 
 
@@ -49,9 +58,9 @@ array3 = [
    97, 98, 99
  ]
 
-# print(finder(array1)}\t[...Identical arrays]`);
-# print(`${finder(array2)}\t\t\t[...12 is missing]`);
-# print(`${finder(array3)}\t\t[...5, 43, 68 and 100 are missing]`);
+print(finder(array1), "\t[...Identical arrays]")
+print(finder(array2), "\t\t\t[...12 is missing]")
+print(finder(array3), "\t[...5, 43, 68 and 100 are missing]")
 
 # print(`${finder_2(array1)}\t[...Identical arrays]`);
 # print(`${finder_2(array2)}\t\t\t[...12 is missing]`);
