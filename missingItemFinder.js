@@ -16,8 +16,12 @@ function finder(arr) {
                 missingItemsArray.push(value);
             }
         }
+        if(missingItemsArray.length === 0){
+            return "Arrays are identical but not in the same order";
+        }else{
+            return missingItemsArray;
+        }
     }
-    return missingItemsArray;
 };
 
 function finder_2(arr) {
@@ -42,7 +46,7 @@ function finder_2(arr) {
  */
 
 var array1 = [
-    1,  2,  3,   4,  5,  6,  7,  8,  9, 10, 11, 12,
+    1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12,
    13, 14, 15,  16, 17, 18, 19, 20, 21, 22, 23, 24,
    25, 26, 27,  28, 29, 30, 31, 32, 33, 34, 35, 36,
    37, 38, 39,  40, 41, 42, 43, 44, 45, 46, 47, 48,
@@ -77,10 +81,10 @@ var array1 = [
    97, 98, 99
  ];
 
-console.log(`${finder(array1)}\t[...Identical arrays]`);
-console.log(`${finder(array2)}\t\t\t[...12 is missing]`);
-console.log(`${finder(array3)}\t\t[...5, 43, 68 and 100 are missing]`);
+console.log(`${finder(array1)}\t\t\t\t[...Identical arrays]`);
+console.log(`${finder(array2)}\t\t\t\t\t\t[...12 is missing]`);
+console.log(`${finder(array3)}\t\t\t\t\t[...5, 43, 68 and 100 are missing]`);
 
-console.log(`${finder_2(array1)}\t[...Identical arrays]`);
-console.log(`${finder_2(array2)}\t\t\t[...12 is missing]`);
-console.log(`${finder_2(array3)}\t\t[...5, 43, 68 and 100 are missing]`);
+console.log(`${finder_2(array1)}\t\t\t\t[...Identical arrays]`);
+console.log(`${finder_2(array2)}\t\t\t\t\t\t[...12 is missing]`);
+console.log(`${finder_2(array3)}\t\t\t\t\t[...5, 43, 68 and 100 are missing]`);

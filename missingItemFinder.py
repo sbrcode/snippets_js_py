@@ -10,13 +10,13 @@ def finder(arr):
     sec_set = set(arr)
     # Get the differences between two sets
     differences = (first_set - sec_set).union(sec_set - first_set)
-    # print('Differences between two lists: ')
     if differences == set():
         return "Arrays are identical !"
     else:
         return differences
 
-
+def finder_2(arr):
+    pass
 
 
 
