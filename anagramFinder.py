@@ -14,7 +14,7 @@ value11 = "nacre"; value12 = "rance"
 value21 = "tenancières"; value22 = "cannetières"
 value31 = "vaginales"; value32 = "Galvanise"
 value41 = "cador"; value42 = "crade"
-value51 = "jeudi"; value52 = True
+value51 = "true"; value52 = True
 
 print(finder(value11, value12), "\t\t\t\tAnagram? true")
 print(finder(value21, value22), "\t\t\t\tAnagram? true")
