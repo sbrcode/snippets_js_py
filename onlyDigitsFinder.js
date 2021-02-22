@@ -4,10 +4,13 @@
  */
 
 function finder(chain){
-    if(isNaN(Number(chain))){
-        return `${chain}\tNot Only Digits..`
+    if(typeof chain === "string"){
+        if(isNaN(Number(chain))){
+            return `${chain}\tnot only digits..`
+        }
+        return `${chain}\tContains Only Digits !`
     }
-    return `${chain}\tContains Only Digits !`
+    return `${chain}\tis not a string input.`
 }
 
 /**
@@ -23,6 +26,6 @@ var chain5 = [12, 1];
 
 console.log(`${finder(chain1)}\t\t\t\t\tAnswer: Contains Only Digits !`);
 console.log(`${finder(chain2)}\t\t\t\t\tAnswer: Contains Only Digits !`);
-console.log(`${finder(chain3)}\t\t\t\t\tAnswer: Not Only Digits..`);
-console.log(`${finder(chain4)}\t\t\t\t\tAnswer: Not Only Digits..`);
-console.log(`${finder(chain5)}\t\t\t\t\tAnswer: Not Only Digits..`);
+console.log(`${finder(chain3)}\t\t\t\t\tAnswer: not only digits..`);
+console.log(`${finder(chain4)}\t\t\t\t\tAnswer: not only digits..`);
+console.log(`${finder(chain5)}\t\t\t\t\tAnswer: is not a string input.`);

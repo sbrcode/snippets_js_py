@@ -3,8 +3,13 @@ determine if a string contains only digits
 '''
 
 def finder(chain):
-    pass
-
+    try:
+        if float(chain):
+            return "%s \tContains Only Digits !" % chain
+    except ValueError:
+        return "%s \tnot only digits.." % chain
+    except TypeError:
+        return "%s \tis not a string input." % chain
 
 # Here begin test part 
 
@@ -14,8 +19,8 @@ chain3 = '1 23'
 chain4 = '1A'
 chain5 = [12, 1]
 
-print(finder(chain1), "\t\t\t\t\tAnswer: Contains Only Digits !")
-print(finder(chain2), "\t\t\t\t\tAnswer: Contains Only Digits !")
-print(finder(chain3), "\t\t\t\t\tAnswer: Not Only Digits..")
-print(finder(chain4), "\t\t\t\t\tAnswer: Not Only Digits..")
-print(finder(chain5), "\t\t\t\t\tAnswer: Not Only Digits..")
+print("%s \t\t\t\t\tAnswer: Contains Only Digits !" % finder(chain1))
+print("%s \t\t\t\t\tAnswer: Contains Only Digits !" % finder(chain2))
+print("%s \t\t\t\t\tAnswer: not only digits.." % finder(chain3))
+print("%s \t\t\t\t\tAnswer: not only digits.." % finder(chain4))
+print("%s \t\t\t\t\tAnswer: is not a string input." % finder(chain5))
