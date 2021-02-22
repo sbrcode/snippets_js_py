@@ -66,10 +66,12 @@ array3 = [
    97, 98, 99
  ]
 
-print(finder(array1), "\t\t\t\t[...Identical arrays]")
-print(finder(array2), "\t\t\t\t\t\t[...12 is missing]")
-print(finder(array3), "\t\t\t\t[...5, 43, 68 and 100 are missing]")
+print("---- 1st method ----")
+print("%s\t\t\t\t[...Identical arrays]" % finder(array1))
+print("%s\t\t\t\t\t\t[...12 is missing]" % finder(array2))
+print("%s\t\t\t\t[...5, 43, 68 and 100 are missing]" % finder(array3))
 
-print(finder_2(array1), "\t\t\t\t[...Identical arrays]")
-print(finder_2(array2), "\t\t\t\t\t\t[...12 is missing]")
-print(finder_2(array3), "\t\t\t\t[...5, 43, 68 and 100 are missing]")
+print("\n---- 2nd method ----")
+print("%s\t\t\t\t[...Identical arrays]" % finder_2(array1))
+print("%s\t\t\t\t\t\t[...12 is missing]" % finder_2(array2))
+print("%s\t\t\t\t[...5, 43, 68 and 100 are missing]" % finder_2(array3))

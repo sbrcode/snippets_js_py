@@ -23,8 +23,8 @@ chain3 = '1 Valvule'
 chain4 = True
 chain5 = ['agua', 'gwada']
 
-print(finder(chain1), "\t\t\tAnswer: No unique char !")
-print(finder(chain2), "\t\t\t\t\tAnswer: t")
-print(finder(chain3), "\t\t\t\t\tAnswer: 1")
-print(finder(chain4), "\t\t\t\tMot a String !")
-print(finder(chain5), "\t\t\t\tMot a String !")
+print("%s\t\t\tAnswer: No unique char !" % finder(chain1))
+print("%s\t\t\t\t\tAnswer: t" % finder(chain2))
+print("%s\t\t\t\t\tAnswer: 1" % finder(chain3))
+print("%s\t\t\t\tMot a String !" % finder(chain4))
+print("%s\t\t\t\tMot a String !" % finder(chain5))

@@ -11,8 +11,8 @@ def finder(val1, val2):
             if i not in char2:
                 missingItemsArray.append(i)
         if missingItemsArray == [] and len(char1) == len(char2):
-            return val1, " and ", val2, " are anagrams !"
-    return "no anagram."
+            return "%s and %s are ANAGRAMS !" % (val1, val2)
+    return "%s and %s are NOT anagrams." % (val1, val2)
 
 def finder_2(val1, val2):
     if isinstance(val1, str) and isinstance(val2, str):
@@ -27,8 +27,8 @@ def finder_2(val1, val2):
         sorted1 = ''.join(sorted(tosort1))
         sorted2 = ''.join(sorted(tosort2))
         if sorted1 == sorted2:
-            return val1, " and ", val2, " are anagrams !"
-    return "no anagram."
+            return "%s and %s are ANAGRAMS !" % (val1, val2)
+    return "%s and %s are NOT anagrams." % (val1, val2)
 
 # Here begin test part 
 
@@ -39,15 +39,15 @@ value41 = "cador"; value42 = "crade"
 value51 = "true"; value52 = True
 
 print("---- 1st method ----")
-print(finder(value11, value12), "\t\t\t\tAnagram? true")
-print(finder(value21, value22), "\t\tAnagram? true")
-print(finder(value31, value32), "\t\t\tAnagram? true")
-print(finder(value41, value42), "\t\t\t\t\t\t\t\tAnagram? false")
-print(finder(value51, value52), "\t\t\t\t\t\t\t\tAnagram? false")
+print("%s\t\t\t\tYes!" % finder(value11, value12))
+print("%s\t\tYes!" % finder(value21, value22))
+print("%s\t\t\tYes!" % finder(value31, value32))
+print("%s\t\t\tNo." % finder(value41, value42))
+print("%s\t\t\t\tNo." % finder(value51, value52))
 
-print("---- 2nd method ----")
-print(finder_2(value11, value12), "\t\t\t\tAnagram? true")
-print(finder_2(value21, value22), "\t\tAnagram? true")
-print(finder_2(value31, value32), "\t\t\tAnagram? true")
-print(finder_2(value41, value42), "\t\t\t\t\t\t\t\tAnagram? false")
-print(finder_2(value51, value52), "\t\t\t\t\t\t\t\tAnagram? false")
+print("\n---- 2nd method ----")
+print("%s\t\t\t\tYes!" % finder_2(value11, value12))
+print("%s\t\tYes!" % finder_2(value21, value22))
+print("%s\t\t\tYes!" % finder_2(value31, value32))
+print("%s\t\t\tNo." % finder_2(value41, value42))
+print("%s\t\t\t\tNo." % finder_2(value51, value52))

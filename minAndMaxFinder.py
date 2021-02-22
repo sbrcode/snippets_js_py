@@ -1,5 +1,5 @@
 '''
-determine min and max values of an number array
+determine min and max values of a number array
 '''
 
 def finder(arr):
@@ -10,8 +10,7 @@ def finder(arr):
                 arrNum.append(i)
     if len(arrNum) == 0:
         return "Not a number array !"
-    return "min: ", min(arrNum), "max: ", max(arrNum)
-
+    return "min: %s, max: %s" % (min(arrNum), max(arrNum))
 
 # Here begin test part 
 
@@ -22,9 +21,9 @@ array4 = [8, 3.1, 4, 5.1, 11, 5, 8, 8, 4]
 array5 = [8, -1.1, 4, -12, 11, 5, 8, 8, 4]
 array6 = ['a', False, [0, 1]]
 
-print(finder(array1), "\t\t\t\tMin: 1, Max: 100")
-print(finder(array2), "\t\t\t\tMin: 9, Max: 10")
-print(finder(array3), "\t\t\t\tMin: 0, Max: 8")
-print(finder(array4), "\t\t\t\tMin: 3.1, Max: 11")
-print(finder(array5), "\t\t\t\tMin: -12, Max: 11")
-print(finder(array6), "\t\t\t\t\tNot a number array !")
+print("%s\t\t\t\tMin: 1, Max: 100" % finder(array1))
+print("%s\t\t\t\t\tMin: 9, Max: 10" % finder(array2))
+print("%s\t\t\t\t\tMin: 0, Max: 8" % finder(array3))
+print("%s\t\t\t\tMin: 3.1, Max: 11" % finder(array4))
+print("%s\t\t\t\tMin: -12, Max: 11" % finder(array5))
+print("%s\t\t\t\tNot a number array !" % finder(array6))

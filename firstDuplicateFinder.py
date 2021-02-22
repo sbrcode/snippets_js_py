@@ -20,7 +20,7 @@ array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 array3 = [1, 2, 3, 4, 5, 6, 7, 8, 10, 10]
 array4 = [1, 8, 3, 4, 5, 10, 5, 8, 8, 4]
 
-print(finder(array1), "\t\t\t\tAnswer is: 3")
-print(finder(array2), "\t\t\tAnswer is: no duplicate")
-print(finder(array3), "\t\t\t\tAnswer is: 10")
-print(finder(array4), "\t\t\t\tAnswer is: 5")
+print("%s \t\t\t\tAnswer is: 3" % finder(array1))
+print("%s \t\t\tAnswer is: no duplicate" % finder(array2))
+print("%s \t\t\t\tAnswer is: 10" % finder(array3))
+print("%s \t\t\t\tAnswer is: 5" % finder(array4))
