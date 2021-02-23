@@ -3,21 +3,45 @@
  * 
  */
 
-const arr = [1, 2, 4, 100, 4, 5, 6, 7.1, 8, 9, 0.9, 0];
-
-function finder(arr){
-
+function finder(constant, arr){
+    pairs = [];
+    for(i of arr){
+        arrTemp = arr.slice(1, arr.length);
+        for(j of arrTemp){
+            if(i + j === constant){
+                if(i<=j){
+                    integersPair = `${i}+${j}`;
+                }else{
+                    integersPair = `${j}+${i}`;
+                }
+            pairs.push(integersPair);
+            }
+        }
+        arr = arr.slice(1, arr.length);
+        if(arr.length === 1){
+            break
+        }
+    }
+    //return No Pairs at all if table of pairs is empty
+    if(pairs.length === 0){
+        return "No Pairs at all !"
+    }
+    //unduplicating
+    pairs = pairs.filter((el, pos) => {
+        return pairs.indexOf(el) === pos
+    })
+    return pairs.join(', ')
 }
 
 /**
  * Here begin test part 
  * 
  */
+const arr = [1, 2, 4, 100, 4, 5, 6, 7.1, 8, 9, 0.9, 0, 2];
+const constant1 = 3;
+const constant2 = 8;
+const constant3 = 103;
 
-var const1 = 3;
-var const2 = 8;
-var const3 = 103;
-
-console.log(`${finder(const1)}\t\t\t\t\tPairs are : 1 & 2`);
-console.log(`${finder(const2)}\t\t\t\t\tPairs are : 2 & 6, 4 & 4, 8 & 0`);
-console.log(`${finder(const3)}\t\t\t\t\tNo Pairs at all !`);
+console.log(`${finder(constant1, arr)}\t\t\t\t\t\tPairs are : 1+2`);
+console.log(`${finder(constant2, arr)}\t\t\t\tPairs are : 2+6, 4+4, 0.9+7.1, 0+8`);
+console.log(`${finder(constant3, arr)}\t\t\t\tNo Pairs at all !`);
