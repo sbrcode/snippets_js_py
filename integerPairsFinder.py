@@ -9,10 +9,8 @@ def finder(arr):
 
 # Here begin test part 
 
-const1 = 3
-const2 = 8
-const3 = 103
 
-print("%s\t\t\t\t\tPairs are : 1+2" % finder(const1))
-print("%s\t\t\t\t\tPairs are : 2+6, 4+4, 0.9+7.1, 0+8" % finder(const2))
-print("%s\t\t\t\t\tNo Pairs at all !" % finder(const3))
+print("%s\t\t\t\t\tPairs are : 1+2" % finder(3))
+print("%s\t\t\t\t\tPairs are : 2+6, 4+4, 0.9+7.1, 0+8" % finder(8))
+print("%s\t\t\t\t\tNo Pairs at all !" % finder(103))
+print("%s\t\t\t\t\tPlease enter a number !" % finder('a'))
