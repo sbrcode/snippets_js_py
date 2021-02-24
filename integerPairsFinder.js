@@ -15,7 +15,7 @@ function finder(constant, arr){
                     }else{
                         integersPair = `${j}+${i}`;
                     }
-                pairs.push(integersPair);
+                    pairs.push(integersPair);
                 }
             }
             arr = arr.slice(1, arr.length);
@@ -46,3 +46,4 @@ console.log(`${finder(3, arr)}\t\t\t\t\t\tPairs are : 1+2`);
 console.log(`${finder(8, arr)}\t\t\t\tPairs are : 2+6, 4+4, 0.9+7.1, 0+8`);
 console.log(`${finder(103, arr)}\t\t\t\tNo Pairs at all !`);
 console.log(`${finder('a', arr)}\t\t\t\tPlease enter a number !`);
+console.log(`${finder(true, arr)}\t\t\t\tPlease enter a number !`);
