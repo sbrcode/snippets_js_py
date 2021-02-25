@@ -11,8 +11,10 @@ chain1 = 'Laval'
 chain2 = '156651'
 chain3 = 12321
 chain4 = 'semâmes'
+chain5 = "A man, a plan, a canal, Panama"
 
 print("%s\t\t\t\tis Palindrome !" % finder(chain1))
 print("%s\t\t\t\tis Palindrome !" % finder(chain2))
 print("%s\t\t\t\tis not a string input !" % finder(chain3))
 print("%s\t\t\t\tis Palindrome !" % finder(chain4))
+print("%s\t\t\t\tis Palindrome !" % finder(chain5))
