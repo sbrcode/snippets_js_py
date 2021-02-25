@@ -4,8 +4,8 @@ determine if 2 strings are anagrams
 
 def finder(val1, val2):
     if isinstance(val1, str) and isinstance(val2, str):
-        char1 = list(val1.casefold())
-        char2 = list(val2.casefold())
+        char1 = list(val1.lower())
+        char2 = list(val2.lower())
         missingItemsArray = []
         for i in char1:
             if i not in char2:
@@ -18,8 +18,8 @@ def finder_2(val1, val2):
     if isinstance(val1, str) and isinstance(val2, str):
         tosort1 = []
         tosort2 = []
-        char1 = val1.casefold()
-        char2 = val2.casefold()
+        char1 = val1.lower()
+        char2 = val2.lower()
         for char in char1:
             tosort1.append(char)
         for char in char2:
