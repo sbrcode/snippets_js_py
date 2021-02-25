@@ -7,7 +7,7 @@ def finder(chain):
 
 # Here begin test part 
 
-chain1 = 'aâaùñóß'
+chain1 = 'ßaùâñaó'
 chain2 = 'Nabuchodonosor'
 chain3 = True
 chain4 = 'part_1'

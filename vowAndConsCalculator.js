@@ -17,14 +17,14 @@ function finder(chain){
                 vowels.push(char)
             }
         }
-        let shortAnswer = `Vows: ${vowels.length} - Cons: ${consonants.length}`
-        let nameChain = `\t\t(${chain})`
+        let shortAnswer = `'${chain}'\n\tVows: ${vowels.length} - Cons: ${consonants.length}`
+        // let nameChain = `\t\t[${chain}]`
         if(chainAlpha.length !== chain.length){
-            return shortAnswer + ` - Others: ${chain.length - chainAlpha.length}` + nameChain
+            return shortAnswer + ` - Others: ${chain.length - chainAlpha.length}`
         }
-        return shortAnswer + nameChain
+        return shortAnswer
     }
-    return `${chain}\tis not a string input !`
+    return `${chain}\n\tis not a string input !`
 }
 
 /**
@@ -32,12 +32,12 @@ function finder(chain){
  * 
  */
 
-var chain1 = 'aâaùñóß';
+var chain1 = 'ßaùâñaó';
 var chain2 = 'Nabuchodonosor';
 var chain3 = true;
 var chain4 = 'part_1';
 
 console.log(`${finder(chain1)}\t\t\t\tVows: 5 - Cons: 2`);
-console.log(`${finder(chain2)}\t\t\tVows: 6 - Cons: 8`);
-console.log(`${finder(chain3)}\t\t\t\t\t\tis not a string input !`);
+console.log(`${finder(chain2)}\t\t\t\tVows: 6 - Cons: 8`);
+console.log(`${finder(chain3)}\t\t\t\tis not a string input !`);
 console.log(`${finder(chain4)}\t\t\tVows: 1 - Cons: 3 - Others: 2`);
