@@ -5,7 +5,7 @@ chain
 
 def finder(chain):
     if isinstance(chain, str):
-        chain = chain.casefold()
+        chain = chain.lower()
         for char in chain:
             count = len(chain.split(char)) - 1
             if count == 1:
