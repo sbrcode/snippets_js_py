@@ -1,7 +1,7 @@
 /** find all duplicate values of an array */
 
 function finder(arr){
-
+    return arr.filter((elem, pos) => arr.indexOf(elem) !== pos); 
 }
 
 /**
