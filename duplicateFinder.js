@@ -17,15 +17,7 @@ function finder(arr){
         return duplicates.length !== 0 ? JSON.stringify(duplicates) : "No duplicate"
     }
     // Following part has to be checked
-    let newArray = [];
-    let lookupObject = {};
-    for(let i in arrObj){
-        lookupObject[arrObj[i]] = arrObj[i];
-    }
-    for(let j in lookupObject){
-        newArray.push(lookupObject[j]);
-    }
-    return JSON.stringify(newArray);
+    return JSON.stringify(arrObj);
 }
 
 /**
