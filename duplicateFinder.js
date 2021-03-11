@@ -8,9 +8,15 @@ function finder(arr){
         }
     }
     if(arrObj.length === 0){
-        arrF = arr.filter((elem, pos) => arr.indexOf(elem) !== pos);
-        return arrF.length !== 0 ? arrF : "No duplicate"
+        duplicates = []
+        for(i in arr){
+            if(arr.slice(0, i-arr.length).includes(arr[i]) && ! duplicates.includes(arr[i])){
+                duplicates.push(arr[i])
+            }
+        }
+        return duplicates.length !== 0 ? JSON.stringify(duplicates) : "No duplicate"
     }
+    // Following part has to be checked
     let newArray = [];
     let lookupObject = {};
     for(let i in arrObj){
@@ -33,8 +39,9 @@ var array3 = [1, 4, 3, 'a', 4, 5, -6, 7, 8, 10, 'a', 10, -6];
 var array4 = [1, 8, 3, 8, 5.1, 10, 5.1, 8, 8, 4];
 var array5 = [{"a": 1}, {"b": 2}, {"b": 1}, {"a": 1}, {"b": 2}, {"b": 2}];
 
-console.log(`${finder(array1)}\t\t\t\t|| 3,true`);
+console.log(`${finder(array1)}\t\t\t\t|| [3,true]`);
 console.log(`${finder(array2)}\t\t\t\t|| No duplicate`);
-console.log(`${finder(array3)}\t\t\t\t|| 4,a,10,-6`);
-console.log(`${finder(array4)}\t\t\t\t|| 8,5.1,8,8`);
-console.log(`${finder(array5)}\t\t\t\t|| {'a': 1},{'b': 2}`);
+console.log(`${finder(array3)}\t\t\t\t|| [4,"a",10,-6]`);
+console.log(`${finder(array4)}\t\t\t\t|| [8,5.1]`);
+console.log(`${finder(array5)}\t\t\t\t|| [{"a": 1},{"b": 2}]`);
+
