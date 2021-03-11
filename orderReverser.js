@@ -13,12 +13,12 @@ function finder(arr){
 
 /** Here begin test part */
 
-var array1 = 'iamastring';
+var array1 = 'i am a string';
 var array2 = [1, 'retro', 2, true, 5.1, 'game'];
 var array3 = [[1,2,3,4,5],[6,7,8,9]];
 var array4 = [{'a': 100}, {'b': 10}, {'c': 1}];
 
-console.log(`${finder(array1)}\t\t\t\t||\tgnirtsamai`);
+console.log(`${finder(array1)}\t\t\t\t||\tgnirts a ma i`);
 console.log(`${finder(array2)}\t\t\t\t||\t['game',5.1,true,2,'retro',1]`);
 console.log(`${finder(array3)}\t\t\t\t||\t[[6,7,8,9],[1,2,3,4,5]]`);
 console.log(`${finder(array4)}\t\t\t\t||\t[{'c': 1},{'b': 10},{'a': 100}]`);
