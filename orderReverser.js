@@ -4,7 +4,10 @@
  */
 
 function finder(arr){
-
+    if(typeof arr === "object"){
+        return JSON.stringify(arr.reverse())
+    }
+    return arr.split("").reverse().join("")
 }
 
 
