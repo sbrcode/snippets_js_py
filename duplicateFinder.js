@@ -1,6 +1,6 @@
 /** find all duplicate values of an array */
 
-function finder(arr){
+function finder(arr, comp){
     let arrObj = [];
     for(let i of arr){
         if(typeof i === "object"){
@@ -8,16 +8,22 @@ function finder(arr){
         }
     }
     if(arrObj.length === 0){
-        duplicates = []
-        for(i in arr){
+        let duplicates = []
+        for(let i in arr){
             if(arr.slice(0, i-arr.length).includes(arr[i]) && ! duplicates.includes(arr[i])){
                 duplicates.push(arr[i])
             }
         }
         return duplicates.length !== 0 ? JSON.stringify(duplicates) : "No duplicate"
     }
-    // Following part has to be checked
-    return JSON.stringify(arrObj);
+    let duplicatedObjects = []
+    for(let i in arrObj){
+        if(JSON.stringify(arrObj.slice(0, i-arrObj.length)).includes(JSON.stringify(arrObj[i])) &&
+         ! JSON.stringify(duplicatedObjects).includes(JSON.stringify(arrObj[i]))){
+            duplicatedObjects.push(arrObj[i])
+        }
+    }
+    return duplicatedObjects.length !== 0 ? JSON.stringify(duplicatedObjects) : "No duplicate"
 }
 
 /**
@@ -35,5 +41,4 @@ console.log(`${finder(array1)}\t\t\t\t|| [3,true]`);
 console.log(`${finder(array2)}\t\t\t\t|| No duplicate`);
 console.log(`${finder(array3)}\t\t\t\t|| [4,"a",10,-6]`);
 console.log(`${finder(array4)}\t\t\t\t|| [8,5.1]`);
-console.log(`${finder(array5)}\t\t\t\t|| [{"a": 1},{"b": 2}]`);
-
+console.log(`${finder(array5, 'id')}\t\t\t\t|| [{"a": 1},{"b": 2}]`);
