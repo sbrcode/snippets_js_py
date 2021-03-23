@@ -10,7 +10,7 @@ def finder(arr):
                 arrNum.append(i)
     if len(arrNum) == 0:
         return "Not a number array !"
-    return "min: %s, max: %s" % (min(arrNum), max(arrNum))
+    return "min: %s, max: %s, ave: %s" % (min(arrNum), max(arrNum), sum(arrNum)/len(arrNum))
 
 # Here begin test part 
 
@@ -21,9 +21,9 @@ array4 = [8, 3.1, 4, 5.1, 11, 5, 8, 8, 4]
 array5 = [8, -1.1, 4, -12, 11, 5, 8, 8, 4]
 array6 = ['a', False, [0, 1]]
 
-print("%s\t\t\t\tMin: 1, Max: 100" % finder(array1))
-print("%s\t\t\t\t\tMin: 9, Max: 10" % finder(array2))
-print("%s\t\t\t\t\tMin: 0, Max: 8" % finder(array3))
-print("%s\t\t\t\tMin: 3.1, Max: 11" % finder(array4))
-print("%s\t\t\t\tMin: -12, Max: 11" % finder(array5))
+print("%s\t\t\t\tMin: 1, Max: 100, Ave: 14.9" % finder(array1))
+print("%s\t\t\t\t\tMin: 9, Max: 10, Ave: 9.5" % finder(array2))
+print("%s\t\t\t\t\tMin: 0, Max: 8, Ave: 3.875" % finder(array3))
+print("%s\t\t\t\tMin: 3.1, Max: 11, Ave: 6.2444..." % finder(array4))
+print("%s\t\t\t\tMin: -12, Max: 11, Ave: 3.8777..." % finder(array5))
 print("%s\t\t\t\tNot a number array !" % finder(array6))
