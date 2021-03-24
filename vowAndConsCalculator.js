@@ -18,7 +18,6 @@ function finder(chain){
             }
         }
         let shortAnswer = `'${chain}'\n\tVows: ${vowels.length} - Cons: ${consonants.length}`
-        // let nameChain = `\t\t[${chain}]`
         if(chainAlpha.length !== chain.length){
             return shortAnswer + ` - Others: ${chain.length - chainAlpha.length}`
         }
