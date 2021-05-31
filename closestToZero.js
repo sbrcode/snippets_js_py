@@ -4,11 +4,16 @@
  */
 
  function computeClosestToZero(ts){
-  if(ts.length === 0){
-    return "empty array";
+  if (ts.length > 0 && ts.length <= 10000) {
+    const tsAbs = ts.map(val => Math.abs(val));
+    res = Math.min(...tsAbs);
+    if (ts.indexOf(res) !== -1) {
+      return res;
+    } else {
+      return -res;
+    }
   }
-  const tsAbs = ts.map(val => Math.abs(val));
-  return Math.min(...tsAbs);
+  return 0
 }
 
 
